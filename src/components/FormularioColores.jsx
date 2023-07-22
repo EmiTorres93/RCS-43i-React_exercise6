@@ -12,6 +12,8 @@ const FormularioColores = () => {
     setColor(" ");
   };
 
+  const borrarColor = () => {};
+
   return (
     <>
       <Form onSubmit={handleSubmit}>
