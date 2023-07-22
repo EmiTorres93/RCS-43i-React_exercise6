@@ -2,11 +2,12 @@ import { ListGroup, Button } from "react-bootstrap";
 
 const ItemColor = () => {
   return (
-    <div>
-      <ListGroup.Item className="d-flex justify-content-between">
+    <div className="d-flex justify-content-between">
+      <ListGroup.Item className="d-flex container-fluid">
         Nombre del Color Guardado
-        <Button variant="danger">Eliminar</Button>
+        <div className="px-2">CajaColor</div>
       </ListGroup.Item>
+      <Button variant="danger">Eliminar</Button>
     </div>
   );
 };
