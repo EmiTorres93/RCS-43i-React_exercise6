@@ -12,7 +12,12 @@ const FormularioColores = () => {
     setColor(" ");
   };
 
-  const borrarColor = () => {};
+  const borrarColor = (colorBorrar) => {
+    let listaColoresFiltrada = listaColores.filter(
+      (colorItem) => colorItem !== colorBorrar
+    );
+    setListaColores(listaColoresFiltrada);
+  };
 
   return (
     <>
@@ -34,7 +39,10 @@ const FormularioColores = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ListaColores propsListaColores={listaColores}></ListaColores>
+      <ListaColores
+        propsListaColores={listaColores}
+        propsBorrarColor={borrarColor}
+      ></ListaColores>
     </>
   );
 };

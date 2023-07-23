@@ -1,13 +1,28 @@
-import { ListGroup, Button } from "react-bootstrap";
+import { ListGroup, Button, InputGroup, Form } from "react-bootstrap";
 
-const ItemColor = ({ propsnombreColor }) => {
+const ItemColor = ({ propsnombreColor, propsBorrarColor }) => {
   return (
     <div className="d-flex justify-content-between">
-      <ListGroup.Item className="d-flex container-fluid">
+      <ListGroup.Item className="d-flex m-2 container-fluid">
         {propsnombreColor}
-        <div className="px-2">CajaColor</div>
+
+        <InputGroup className="mb-3 px-2 mx-2">
+          <Form.Control
+            className="box"
+            type="color"
+            value="#000000"
+            aria-label="Example text with button addon"
+            aria-describedby="basic-addon1"
+          />
+        </InputGroup>
       </ListGroup.Item>
-      <Button variant="danger">Eliminar</Button>
+      <Button
+        className="m-2"
+        variant="danger"
+        onClick={() => propsBorrarColor(propsnombreColor)}
+      >
+        Eliminar
+      </Button>
     </div>
   );
 };
