@@ -9,7 +9,7 @@ const FormularioColores = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setListaColores([...listaColores, color]);
-    setColor(" ");
+    setColor("");
   };
 
   const borrarColor = (colorBorrar) => {

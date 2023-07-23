@@ -5,16 +5,10 @@ const ItemColor = ({ propsnombreColor, propsBorrarColor }) => {
     <div className="d-flex justify-content-between">
       <ListGroup.Item className="d-flex m-2 container-fluid">
         {propsnombreColor}
-
-        <InputGroup className="mb-3 px-2 mx-2">
-          <Form.Control
-            className="box"
-            type="color"
-            value="#000000"
-            aria-label="Example text with button addon"
-            aria-describedby="basic-addon1"
-          />
-        </InputGroup>
+        <div
+          className="m-2 box"
+          style={{ backgroundColor: propsnombreColor }}
+        ></div>
       </ListGroup.Item>
       <Button
         className="m-2"
