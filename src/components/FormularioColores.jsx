@@ -28,7 +28,7 @@ const FormularioColores = () => {
         >
           <Form.Control
             type="text"
-            placeholder="Ingrese un color"
+            placeholder="Ingrese un color en inglés. Ej: blue."
             value={color}
             onChange={(e) => {
               setColor(e.target.value);

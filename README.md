@@ -29,7 +29,7 @@ Utilizamos un HOOK que es una función que le da habilidades extras a mi functio
 ### Repositorio 💻
 
 Los ejercicios se encuentran en el sgte. repositorio:
-https://github.com/EmiTorres93/RCS-43i-React_exercise3
+https://github.com/EmiTorres93/RCS-43i-React_exercise6
 
 - Para clonar el Repositorio:
 
