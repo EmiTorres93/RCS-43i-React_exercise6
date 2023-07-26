@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 
 const FormularioColores = () => {
   const [color, setColor] = useState("");
-  let localStoragelistaColores = JSON.parse(
-    localStorage.getItem("color") || []
-  );
+
+  let localStoragelistaColores =
+    JSON.parse(localStorage.getItem("color")) || [];
   const [listaColores, setListaColores] = useState(localStoragelistaColores);
 
   useEffect(() => {
