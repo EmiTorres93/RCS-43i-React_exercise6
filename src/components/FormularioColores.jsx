@@ -1,10 +1,17 @@
 import { Form, Button } from "react-bootstrap";
 import ListaColores from "./ListaColores";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const FormularioColores = () => {
   const [color, setColor] = useState("");
-  const [listaColores, setListaColores] = useState([]);
+  let localStoragelistaColores = JSON.parse(
+    localStorage.getItem("color") || []
+  );
+  const [listaColores, setListaColores] = useState(localStoragelistaColores);
+
+  useEffect(() => {
+    localStorage.setItem("color", JSON.stringify(listaColores));
+  }, [listaColores]); //el State que quiero que cuando se actualice se ejecute la lógica del useEffect.
 
   const handleSubmit = (e) => {
     e.preventDefault();
